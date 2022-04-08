@@ -1,0 +1,13 @@
+{
+  "include": ["./**/*"],
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": false,
+    "target": "es6",
+    "outDir": "../dist",
+    "module": "CommonJS",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true
+  }
+}

@@ -1,0 +1,1359 @@
+{
+	"info": {
+		"_postman_id": "07b16033-c1ce-4205-b3dd-0cb485978c7d",
+		"name": "Housetable Hospital",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Patient",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"petName\": \"Boby\",\n    \"petType\": \"cat\",\n    \"ownerName\": \"Benjamin\",\n    \"ownerAddress\": \"Demo Address\",\n    \"ownerPhoneNumber\": \"+123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/patient",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"patient"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"petName\": \"Boby\",\n    \"petType\": \"cat\",\n    \"ownerName\": \"Benjamin\",\n    \"ownerAddress\": \"Demo Address\",\n    \"ownerPhoneNumber\": \"+123456789\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/patient",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"patient"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "260"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"104-ht9nJbT8vfnsmMhzKi2XMLWMDkI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Apr 2022 18:40:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Patient was successfully created!\",\n    \"data\": {\n        \"id\": 15,\n        \"petName\": \"Boby\",\n        \"petType\": \"cat\",\n        \"ownerName\": \"Benjamin\",\n        \"ownerAddress\": \"Demo Address\",\n        \"ownerPhoneNumber\": \"+123456789\",\n        \"updatedAt\": \"2022-04-08T18:40:33.885Z\",\n        \"createdAt\": \"2022-04-08T18:40:33.885Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/patient/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"patient",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/patient/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"patient",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "264"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"108-9AOyBDfULx28CrR8Yl/LnYTk8uw\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Apr 2022 17:47:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Patient has been successfully retrieved\",\n    \"data\": {\n        \"id\": 1,\n        \"petName\": \"Bey\",\n        \"petType\": \"cat\",\n        \"ownerName\": \"Benjamin\",\n        \"ownerAddress\": \"Demo Address\",\n        \"ownerPhoneNumber\": \"+123456789\",\n        \"createdAt\": \"2022-04-08T17:06:58.645Z\",\n        \"updatedAt\": \"2022-04-08T17:06:58.645Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/patient/list",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"patient",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/patient/list",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"patient",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2924"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b6c-mzQFDSkMVjiuf5Sxi5rTd61ojDo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Apr 2022 17:46:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Patients has been successfully retrieved\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"petName\": \"Bey\",\n            \"petType\": \"cat\",\n            \"ownerName\": \"Benjamin\",\n            \"ownerAddress\": \"Demo Address\",\n            \"ownerPhoneNumber\": \"+123456789\",\n            \"createdAt\": \"2022-04-08T17:06:58.645Z\",\n            \"updatedAt\": \"2022-04-08T17:06:58.645Z\"\n        },\n        {\n            \"id\": 2,\n            \"petName\": \"Bey\",\n            \"petType\": \"cat\",\n            \"ownerName\": \"Benjamin\",\n            \"ownerAddress\": \"Demo Address\",\n            \"ownerPhoneNumber\": \"+123456789\",\n            \"createdAt\": \"2022-04-08T17:08:31.966Z\",\n            \"updatedAt\": \"2022-04-08T17:08:31.966Z\"\n        },\n        {\n            \"id\": 3,\n            \"petName\": \"Bey\",\n            \"petType\": \"cat\",\n            \"ownerName\": \"Benjamin\",\n            \"ownerAddress\": \"Demo Address\",\n            \"ownerPhoneNumber\": \"+123456789\",\n            \"createdAt\": \"2022-04-08T17:09:41.582Z\",\n            \"updatedAt\": \"2022-04-08T17:09:41.582Z\"\n        },\n        {\n            \"id\": 4,\n            \"petName\": \"Bey\",\n            \"petType\": \"cat\",\n            \"ownerName\": \"Benjamin\",\n            \"ownerAddress\": \"Demo Address\",\n            \"ownerPhoneNumber\": \"+123456789\",\n            \"createdAt\": \"2022-04-08T17:09:52.166Z\",\n            \"updatedAt\": \"2022-04-08T17:09:52.166Z\"\n        },\n        {\n            \"id\": 5,\n            \"petName\": \"Bey\",\n            \"petType\": \"cat\",\n            \"ownerName\": \"Benjamin\",\n            \"ownerAddress\": \"Demo Address\",\n            \"ownerPhoneNumber\": \"+123456789\",\n            \"createdAt\": \"2022-04-08T17:09:59.265Z\",\n            \"updatedAt\": \"2022-04-08T17:09:59.265Z\"\n        },\n        {\n            \"id\": 6,\n            \"petName\": \"Bey\",\n            \"petType\": \"cat\",\n            \"ownerName\": \"Benjamin\",\n            \"ownerAddress\": \"Demo Address\",\n            \"ownerPhoneNumber\": \"+123456789\",\n            \"createdAt\": \"2022-04-08T17:10:00.198Z\",\n            \"updatedAt\": \"2022-04-08T17:10:00.198Z\"\n        },\n        {\n            \"id\": 7,\n            \"petName\": \"Bey\",\n            \"petType\": \"cat\",\n            \"ownerName\": \"Benjamin\",\n            \"ownerAddress\": \"Demo Address\",\n            \"ownerPhoneNumber\": \"+123456789\",\n            \"createdAt\": \"2022-04-08T17:10:53.580Z\",\n            \"updatedAt\": \"2022-04-08T17:10:53.580Z\"\n        },\n        {\n            \"id\": 8,\n            \"petName\": \"Bey\",\n            \"petType\": \"cat\",\n            \"ownerName\": \"Benjamin\",\n            \"ownerAddress\": \"Demo Address\",\n            \"ownerPhoneNumber\": \"+123456789\",\n            \"createdAt\": \"2022-04-08T17:11:10.053Z\",\n            \"updatedAt\": \"2022-04-08T17:11:10.053Z\"\n        },\n        {\n            \"id\": 9,\n            \"petName\": \"Bey\",\n            \"petType\": \"cat\",\n            \"ownerName\": \"Benjamin\",\n            \"ownerAddress\": \"Demo Address\",\n            \"ownerPhoneNumber\": \"+123456789\",\n            \"createdAt\": \"2022-04-08T17:11:28.834Z\",\n            \"updatedAt\": \"2022-04-08T17:11:28.834Z\"\n        },\n        {\n            \"id\": 10,\n            \"petName\": \"Bey\",\n            \"petType\": \"cat\",\n            \"ownerName\": \"Benjamin\",\n            \"ownerAddress\": \"Demo Address\",\n            \"ownerPhoneNumber\": \"+123456789\",\n            \"createdAt\": \"2022-04-08T17:11:41.408Z\",\n            \"updatedAt\": \"2022-04-08T17:11:41.408Z\"\n        },\n        {\n            \"id\": 11,\n            \"petName\": \"Bey\",\n            \"petType\": \"cat\",\n            \"ownerName\": \"Benjamin\",\n            \"ownerAddress\": \"Demo Address\",\n            \"ownerPhoneNumber\": \"+123456789\",\n            \"createdAt\": \"2022-04-08T17:13:28.356Z\",\n            \"updatedAt\": \"2022-04-08T17:13:28.356Z\"\n        },\n        {\n            \"id\": 12,\n            \"petName\": \"Bey\",\n            \"petType\": \"cat\",\n            \"ownerName\": \"Benjamin\",\n            \"ownerAddress\": \"Demo Address\",\n            \"ownerPhoneNumber\": \"+123456789\",\n            \"createdAt\": \"2022-04-08T17:16:06.664Z\",\n            \"updatedAt\": \"2022-04-08T17:16:06.664Z\"\n        },\n        {\n            \"id\": 13,\n            \"petName\": \"Bey\",\n            \"petType\": \"cat\",\n            \"ownerName\": \"Benjamin\",\n            \"ownerAddress\": \"Demo Address\",\n            \"ownerPhoneNumber\": \"+123456789\",\n            \"createdAt\": \"2022-04-08T17:44:12.425Z\",\n            \"updatedAt\": \"2022-04-08T17:44:12.425Z\"\n        },\n        {\n            \"id\": 14,\n            \"petName\": \"Bey\",\n            \"petType\": \"cat\",\n            \"ownerName\": \"Benjamin\",\n            \"ownerAddress\": \"Demo Address\",\n            \"ownerPhoneNumber\": \"+123456789\",\n            \"createdAt\": \"2022-04-08T17:44:51.406Z\",\n            \"updatedAt\": \"2022-04-08T17:44:51.406Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"petName\": \"Bob\",\n    \"petType\": \"cat\",\n    \"ownerName\": \"Benjamin\",\n    \"ownerAddress\": \"Demo Address\",\n    \"ownerPhoneNumber\": \"+123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/patient/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"patient",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"petName\": \"Bob\",\n    \"petType\": \"cat\",\n    \"ownerName\": \"Benjamin\",\n    \"ownerAddress\": \"Demo Address\",\n    \"ownerPhoneNumber\": \"+123456789\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/patient/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"patient",
+										"1"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "47"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2f-DlhEt6399rrbb/cKNSXQioLpvIk\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Apr 2022 17:52:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"Patient was successfully updated!\"}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/patient/10",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"patient",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appointment",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"patientId\": 2,\n    \"startTime\": \"10:58:33\",\n    \"endTime\": \"12:30:00\",\n    \"date\": \"2022-04-18\",\n    \"description\": \"Appointment description\",\n    \"fee\": 300,\n    \"paidType\": \"USD\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/appointment",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"appointment"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"patientId\": 1,\n    \"startTime\": \"10:58:33\",\n    \"endTime\": \"12:30:00\",\n    \"date\": \"2022-04-08\",\n    \"description\": \"Appointment description\",\n    \"fee\": 500,\n    \"paidType\": \"USD\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/appointment",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"appointment"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "323"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"143-nu74e4jNlzkJ465xjaCfm6sPVD8\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Apr 2022 18:39:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Appointment was successfully created!\",\n    \"data\": {\n        \"paidFee\": 0,\n        \"feeCompleted\": false,\n        \"id\": 6,\n        \"patientId\": 1,\n        \"startTime\": \"10:58:33\",\n        \"endTime\": \"12:30:00\",\n        \"date\": \"2022-04-08\",\n        \"description\": \"Appointment description\",\n        \"fee\": 500,\n        \"paidType\": \"USD\",\n        \"updatedAt\": \"2022-04-08T18:39:33.114Z\",\n        \"createdAt\": \"2022-04-08T18:39:33.114Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/appointment/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"appointment",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/appointment/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"appointment",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "329"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"149-Otsxzvv9S+e5KVgV7U7FiZ/gCWo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Apr 2022 18:08:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Appointment has been successfully retrieved\",\n    \"data\": {\n        \"id\": 1,\n        \"patientId\": 1,\n        \"startTime\": \"10:58:33\",\n        \"endTime\": \"12:30:00\",\n        \"date\": \"2022-04-08\",\n        \"description\": \"Appointment description\",\n        \"fee\": 500,\n        \"paidFee\": 0,\n        \"paidType\": \"USD\",\n        \"feeCompleted\": false,\n        \"createdAt\": \"2022-04-08T18:04:20.727Z\",\n        \"updatedAt\": \"2022-04-08T18:04:20.727Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Appointments by Patient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/appointment/list/patient/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"appointment",
+								"list",
+								"patient",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Appointments by Patient",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/appointment/list/patient/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"appointment",
+										"list",
+										"patient",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "597"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"255-9nvquG04zXEXGIbQI86gVnAr5bM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Apr 2022 18:11:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Appointments has been successfully retrieved\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"patientId\": 1,\n            \"startTime\": \"10:58:33\",\n            \"endTime\": \"12:30:00\",\n            \"date\": \"2022-04-08\",\n            \"description\": \"Appointment description\",\n            \"fee\": 500,\n            \"paidFee\": 0,\n            \"paidType\": \"USD\",\n            \"feeCompleted\": false,\n            \"createdAt\": \"2022-04-08T18:04:20.727Z\",\n            \"updatedAt\": \"2022-04-08T18:04:20.727Z\"\n        },\n        {\n            \"id\": 2,\n            \"patientId\": 1,\n            \"startTime\": \"10:58:33\",\n            \"endTime\": \"12:30:00\",\n            \"date\": \"2022-04-08\",\n            \"description\": \"Appointment description\",\n            \"fee\": 500,\n            \"paidFee\": 0,\n            \"paidType\": \"USD\",\n            \"feeCompleted\": false,\n            \"createdAt\": \"2022-04-08T18:05:19.765Z\",\n            \"updatedAt\": \"2022-04-08T18:05:19.765Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Appointments Unpaid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/appointment/list/unpaid",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"appointment",
+								"list",
+								"unpaid"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Appointments by Patient",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/appointment/list/patient/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"appointment",
+										"list",
+										"patient",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "597"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"255-9nvquG04zXEXGIbQI86gVnAr5bM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Apr 2022 18:11:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Appointments has been successfully retrieved\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"patientId\": 1,\n            \"startTime\": \"10:58:33\",\n            \"endTime\": \"12:30:00\",\n            \"date\": \"2022-04-08\",\n            \"description\": \"Appointment description\",\n            \"fee\": 500,\n            \"paidFee\": 0,\n            \"paidType\": \"USD\",\n            \"feeCompleted\": false,\n            \"createdAt\": \"2022-04-08T18:04:20.727Z\",\n            \"updatedAt\": \"2022-04-08T18:04:20.727Z\"\n        },\n        {\n            \"id\": 2,\n            \"patientId\": 1,\n            \"startTime\": \"10:58:33\",\n            \"endTime\": \"12:30:00\",\n            \"date\": \"2022-04-08\",\n            \"description\": \"Appointment description\",\n            \"fee\": 500,\n            \"paidFee\": 0,\n            \"paidType\": \"USD\",\n            \"feeCompleted\": false,\n            \"createdAt\": \"2022-04-08T18:05:19.765Z\",\n            \"updatedAt\": \"2022-04-08T18:05:19.765Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Appointments by date",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"date\": \"2022-04-08\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/appointment/list/date",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"appointment",
+								"list",
+								"date"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Appointments by date",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date\": \"2022-04-08\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/appointment/list/date",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"appointment",
+										"list",
+										"date"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "862"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"35e-V4lgBTrB3ikaFX5EKqg/pr/H9Ew\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Apr 2022 18:21:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Appointments has been successfully retrieved\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"patientId\": 1,\n            \"startTime\": \"10:58:33\",\n            \"endTime\": \"12:30:00\",\n            \"date\": \"2022-04-08\",\n            \"description\": \"Appointment description\",\n            \"fee\": 500,\n            \"paidFee\": 0,\n            \"paidType\": \"USD\",\n            \"feeCompleted\": false,\n            \"createdAt\": \"2022-04-08T18:04:20.727Z\",\n            \"updatedAt\": \"2022-04-08T18:04:20.727Z\"\n        },\n        {\n            \"id\": 4,\n            \"patientId\": 1,\n            \"startTime\": \"10:58:33\",\n            \"endTime\": \"12:30:00\",\n            \"date\": \"2022-04-08\",\n            \"description\": \"Appointment description\",\n            \"fee\": 500,\n            \"paidFee\": 0,\n            \"paidType\": \"USD\",\n            \"feeCompleted\": false,\n            \"createdAt\": \"2022-04-08T18:20:41.168Z\",\n            \"updatedAt\": \"2022-04-08T18:20:41.168Z\"\n        },\n        {\n            \"id\": 5,\n            \"patientId\": 1,\n            \"startTime\": \"10:58:33\",\n            \"endTime\": \"12:30:00\",\n            \"date\": \"2022-04-08\",\n            \"description\": \"Appointment description\",\n            \"fee\": 500,\n            \"paidFee\": 0,\n            \"paidType\": \"USD\",\n            \"feeCompleted\": false,\n            \"createdAt\": \"2022-04-08T18:20:42.622Z\",\n            \"updatedAt\": \"2022-04-08T18:20:42.622Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Remaining Billing",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/appointment/remain/bill/patient/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"appointment",
+								"remain",
+								"bill",
+								"patient",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Remaining Billing",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/appointment/remain/bill/patient/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"appointment",
+										"remain",
+										"bill",
+										"patient",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "423"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a7-vfc53PQaOPO8HhWIjT/XZsaPCT0\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Apr 2022 18:49:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Unpaid appointments has been successfully retrieved\",\n    \"remain\": {\n        \"usd\": 1550,\n        \"eur\": 1500,\n        \"bitcoin\": 0.65\n    },\n    \"list\": [\n        {\n            \"fee\": 500,\n            \"paidFee\": 0,\n            \"paidType\": \"USD\"\n        },\n        {\n            \"fee\": 500,\n            \"paidFee\": 0,\n            \"paidType\": \"USD\"\n        },\n        {\n            \"fee\": 1500,\n            \"paidFee\": 0,\n            \"paidType\": \"EUR\"\n        },\n        {\n            \"fee\": 0.15,\n            \"paidFee\": 0,\n            \"paidType\": \"Bitcoin\"\n        },\n        {\n            \"fee\": 0.5,\n            \"paidFee\": 0,\n            \"paidType\": \"Bitcoin\"\n        },\n        {\n            \"fee\": 500,\n            \"paidFee\": 200,\n            \"paidType\": \"USD\"\n        },\n        {\n            \"fee\": 500,\n            \"paidFee\": 250,\n            \"paidType\": \"USD\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/appointment/list",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"appointment",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/appointment/list",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"appointment",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "597"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"255-9nvquG04zXEXGIbQI86gVnAr5bM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Apr 2022 18:08:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Appointments has been successfully retrieved\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"patientId\": 1,\n            \"startTime\": \"10:58:33\",\n            \"endTime\": \"12:30:00\",\n            \"date\": \"2022-04-08\",\n            \"description\": \"Appointment description\",\n            \"fee\": 500,\n            \"paidFee\": 0,\n            \"paidType\": \"USD\",\n            \"feeCompleted\": false,\n            \"createdAt\": \"2022-04-08T18:04:20.727Z\",\n            \"updatedAt\": \"2022-04-08T18:04:20.727Z\"\n        },\n        {\n            \"id\": 2,\n            \"patientId\": 1,\n            \"startTime\": \"10:58:33\",\n            \"endTime\": \"12:30:00\",\n            \"date\": \"2022-04-08\",\n            \"description\": \"Appointment description\",\n            \"fee\": 500,\n            \"paidFee\": 0,\n            \"paidType\": \"USD\",\n            \"feeCompleted\": false,\n            \"createdAt\": \"2022-04-08T18:05:19.765Z\",\n            \"updatedAt\": \"2022-04-08T18:05:19.765Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"patientId\": 1,\n    \"startTime\": \"10:58:33\",\n    \"endTime\": \"12:30:00\",\n    \"date\": \"2022-04-10\",\n    \"description\": \"Appointment date and description updated\",\n    \"fee\": 500,\n    \"paidType\": \"USD\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/appointment/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"appointment",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"patientId\": 1,\n    \"startTime\": \"10:58:33\",\n    \"endTime\": \"12:30:00\",\n    \"date\": \"2022-04-10\",\n    \"description\": \"Appointment date and description updated\",\n    \"fee\": 500,\n    \"paidType\": \"USD\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/appointment/2",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"appointment",
+										"2"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "51"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"33-lU8eE5lxRceU5V2Lyn7nBvlnw7Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Apr 2022 18:16:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"Appointment was successfully updated!\"}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/appointment/3",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"appointment",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/appointment/3",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"appointment",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"38-VeLar0h0uFPyzNz8m6OHOgLEwTM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Apr 2022 18:17:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Appointment has been deleted successfully.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Popularity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/patient/popularity/pet",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"patient",
+								"popularity",
+								"pet"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Popularity",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/patient/popularity/pet",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"patient",
+										"popularity",
+										"pet"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "128"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"80-UCTnKbPRQknRC3lgapWjJpkC7hg\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Apr 2022 19:10:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Unpaid appointments has been successfully retrieved\",\n    \"data\": [\n        {\n            \"patientId\": 2,\n            \"total\": 0\n        },\n        {\n            \"patientId\": 1,\n            \"total\": 950\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "getSubscriptionFee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"startDate\": \"2022-04-01\",\n    \"endDate\": \"2022-04-30\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/subscription/balance",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"subscription",
+								"balance"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
